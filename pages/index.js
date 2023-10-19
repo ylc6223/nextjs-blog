@@ -36,7 +36,7 @@ export default function Home({ allPostsData }) {
   );
 }
 
-// 仅允许在页面中使用
+// 仅允许在页面中使用 getStaticProps仅在服务器端运行。它永远不会在客户端运行。
 // getStaticProps应该在构建时运行，所以不能使用只在请求发生时可用的数据，如查询参数或 HTTP 头。
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData();
